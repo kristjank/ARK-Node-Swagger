@@ -617,7 +617,7 @@
                     }
                 }
             },
-            "post": {
+            "put": {
                 "tags": [
                     "Delegate"
                 ],
@@ -1153,7 +1153,7 @@
                     }
                 }
             },
-            "post": {
+            "put": {
                 "tags": [
                     "Transaction"
                 ],
@@ -1257,7 +1257,7 @@
             }
         },
         "/api/multisignatures": {
-            "post": {
+            "put": {
                 "tags": [
                     "MultiSignature"
                 ],
@@ -1305,7 +1305,7 @@
             }
         },
         "/api/signatures": {
-            "post": {
+            "put": {
                 "tags": [
                     "Signature"
                 ],
