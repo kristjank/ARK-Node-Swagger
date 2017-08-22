@@ -92,7 +92,7 @@
                 ],
                 "summary": "",
                 "description": "",
-                "operationId": "accounts.delegatesFee",
+                "operationId": "accounts.getDelegatesFee",
                 "produces": [
                     "application/json"
                 ],
@@ -126,6 +126,36 @@
                 }, {
                     "type": "integer",
                     "name": "offset",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "accounts.addDelegates",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "secret",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "publicKey",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "secondSecret",
                     "description": ""
                 }],
                 "responses": {
