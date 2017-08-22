@@ -7,6 +7,7 @@
     },
     "host": "api.arknode.net",
     "basePath": "/",
+    "schemes": ["https"],
     "tags": [{
         "name": "Account",
         "description": ""
