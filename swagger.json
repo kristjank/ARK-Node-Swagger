@@ -5,7 +5,7 @@
         "version": "1.0.0",
         "title": "ARK Node Documentation"
     },
-    "host": "ip:port",
+    "host": "api.arknode.net",
     "basePath": "/",
     "tags": [{
         "name": "Account",
