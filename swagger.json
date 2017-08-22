@@ -1,0 +1,1548 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a documentation for ark-node built with Swagger UI to make testing a breeze.",
+        "version": "1.0.0",
+        "title": "ARK Node Documentation"
+    },
+    "host": "ip:port",
+    "basePath": "/",
+    "tags": [{
+        "name": "Account",
+        "description": ""
+    }, {
+        "name": "Block",
+        "description": ""
+    }, {
+        "name": "Delegate",
+        "description": ""
+    }, {
+        "name": "Loader",
+        "description": ""
+    }, {
+        "name": "MultiSignature",
+        "description": ""
+    }, {
+        "name": "Peer",
+        "description": ""
+    }, {
+        "name": "Signature",
+        "description": ""
+    }, {
+        "name": "Transaction",
+        "description": ""
+    }, {
+        "name": "Transport",
+        "description": ""
+    }],
+    "paths": {
+        "/api/accounts/getBalance": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "accounts.getBalance",
+
+                "parameters": [{
+                    "in": "query",
+                    "type": "string",
+                    "name": "address",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/accounts/getPublickey": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "accounts.getPublickey",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "address",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/accounts/delegates/fee": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "accounts.delegatesFee",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/accounts/delegates": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "accounts.getDelegates",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "orderBy",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "limit",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "offset",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/accounts": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "accounts.getAccount",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "address",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/accounts/getAllAccounts": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "accounts.getAllAccounts",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/accounts/top": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "accounts.top",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "integer",
+                    "name": "limit",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "offset",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/accounts/count": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "accounts.count",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/blocks/get": {
+            "get": {
+                "tags": [
+                    "Block"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "blocks.getBlock",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "id",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/blocks": {
+            "get": {
+                "tags": [
+                    "Block"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "blocks.getBlocks",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "integer",
+                    "name": "limit",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "orderBy",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "offset",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "generatorPublicKey",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "totalAmount",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "totalFee",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "reward",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "previousBlock",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "height",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/blocks/getEpoch": {
+            "get": {
+                "tags": [
+                    "Block"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "blocks.getEpoch",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/blocks/getHeight": {
+            "get": {
+                "tags": [
+                    "Block"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "blocks.getHeight",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/blocks/getNethash": {
+            "get": {
+                "tags": [
+                    "Block"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "blocks.getNethash",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/blocks/getFee": {
+            "get": {
+                "tags": [
+                    "Block"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "blocks.getFee",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/blocks/getFees": {
+            "get": {
+                "tags": [
+                    "Block"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "blocks.getFees",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/blocks/getMilestone": {
+            "get": {
+                "tags": [
+                    "Block"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "blocks.getMilestone",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/blocks/getReward": {
+            "get": {
+                "tags": [
+                    "Block"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "blocks.getReward",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/blocks/getSupply": {
+            "get": {
+                "tags": [
+                    "Block"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "blocks.getSupply",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/blocks/getStatus": {
+            "get": {
+                "tags": [
+                    "Block"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "blocks.getStatus",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/delegates/count": {
+            "get": {
+                "tags": [
+                    "Delegate"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "delegates.count",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "address",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/delegates/search": {
+            "get": {
+                "tags": [
+                    "Delegate"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "delegates.search",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "q",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "integer",
+                    "name": "limit",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/delegates/voters": {
+            "get": {
+                "tags": [
+                    "Delegate"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "delegates.getVoters",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "publicKey",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/delegates/get": {
+            "get": {
+                "tags": [
+                    "Delegate"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "delegates.getDelegate",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "publicKey",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "username",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/delegates": {
+            "get": {
+                "tags": [
+                    "Delegate"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "delegates.getDelegates",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "orderBy",
+                    "name": "address",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "limit",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "offset",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Delegate"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "delegates.addDelegate",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "secret",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "publicKey",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "secondSecret",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "username",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/delegates/fee": {
+            "get": {
+                "tags": [
+                    "Delegate"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "delegates.getFee",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "address",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/delegates/forging/getForgedByAccount": {
+            "get": {
+                "tags": [
+                    "Delegate"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "delegates.getForgedByAccount",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "generatorPublicKey",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/delegates/getNextForgers": {
+            "get": {
+                "tags": [
+                    "Delegate"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "delegates.getNextForgers",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "address",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/delegates/forging/enable": {
+            "post": {
+                "tags": [
+                    "Delegate"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "delegates.enableForging",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "secret",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "publicKey",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/delegates/forging/disable": {
+            "post": {
+                "tags": [
+                    "Delegate"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "delegates.disableForging",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "secret",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "publicKey",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/loader/status": {
+            "get": {
+                "tags": [
+                    "Loader"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "signature.status",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "array",
+                    "name": "signatures",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/loader/status/sync": {
+            "get": {
+                "tags": [
+                    "Loader"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "signature.sync",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/loader/autoconfigure": {
+            "get": {
+                "tags": [
+                    "Loader"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "signature.autoconfigure",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/multisignatures/pending": {
+            "get": {
+                "tags": [
+                    "MultiSignature"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "multisignatures.pending",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "publicKey",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/multisignatures/sign": {
+            "post": {
+                "tags": [
+                    "MultiSignature"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "multisignatures.sign",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "secret",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "secondSecret",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "publicKey",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "transactionId",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/multisignatures/accounts": {
+            "get": {
+                "tags": [
+                    "MultiSignature"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "multisignature.getAccounts",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+
+        "/api/peers/get": {
+            "get": {
+                "tags": [
+                    "Peer"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "peers.getPeer",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "ip",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "integer",
+                    "name": "port",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/peers": {
+            "get": {
+                "tags": [
+                    "Peer"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "peers.getPeers",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "integer",
+                    "name": "port",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "state",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "os",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "version",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "orderBy",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "limit",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "offset",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/peers/version": {
+            "get": {
+                "tags": [
+                    "Peer"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "peers.version",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/signatures/fee": {
+            "get": {
+                "tags": [
+                    "Signature"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "signatures.fee",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "address",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/transactions/get": {
+            "get": {
+                "tags": [
+                    "Transaction"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transactions.getTransaction",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "id",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/transactions": {
+            "get": {
+                "tags": [
+                    "Transaction"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transactions.getTransactions",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "blockId",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "limit",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "type",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "orderBy",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "offset",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "senderPublicKey",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "vendorField",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "ownerPublicKey",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "ownerAddress",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "senderId",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "recipientId",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "amount",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "fee",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Transaction"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transactions.addTransactions",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "secret",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "integer",
+                    "name": "amount",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "recipientId",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "vendorField",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "publicKey",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "secondSecret",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "multisigAccountPublicKey",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/transactions/unconfirmed/get": {
+            "get": {
+                "tags": [
+                    "Transaction"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transactions.getUnconfirmedTransaction",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "id",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/transactions/unconfirmed": {
+            "get": {
+                "tags": [
+                    "Transaction"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transactions.getUnconfirmedTransactions",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "senderPublicKey",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "address",
+                    "description": ""
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/multisignatures": {
+            "post": {
+                "tags": [
+                    "MultiSignature"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "multisignatures.addMultisignature",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "secret",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "publicKey",
+                    "description": ""
+                }, {
+                    "type": "string",
+                    "name": "secondSecret",
+                    "description": ""
+                }, {
+                    "type": "integer",
+                    "name": "min",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "integer",
+                    "name": "lifetime",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "array",
+                    "name": "keysgroup",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/api/signatures": {
+            "post": {
+                "tags": [
+                    "Signature"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "signatures.addSignature",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "secret",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "secondSecret",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "publicKey",
+                    "description": "",
+                    "required": true
+                }, {
+                    "type": "string",
+                    "name": "multisigAccountPublicKey",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/peer/list": {
+            "get": {
+                "tags": [
+                    "Transport"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transport.listBroadcastPeers",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/peer/blocks/common": {
+            "get": {
+                "tags": [
+                    "Transport"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transport.commonBlock",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "ids",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/peer/block": {
+            "get": {
+                "tags": [
+                    "Transport"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transport.getBlock",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "address",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/peer/blocks": {
+            "get": {
+                "tags": [
+                    "Transport"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transport.getBlocks",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "address",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/peer/transactions": {
+            "get": {
+                "tags": [
+                    "Transport"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transport.getTransactions",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Transport"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transport.addTransactions",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "array",
+                    "name": "transactions",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/peer/transactionsFromIds": {
+            "get": {
+                "tags": [
+                    "Transport"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transport.transactionsFromIds",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "type": "string",
+                    "name": "ids",
+                    "description": "",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/peer/height": {
+            "get": {
+                "tags": [
+                    "Transport"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transport.height",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        },
+        "/peer/status": {
+            "get": {
+                "tags": [
+                    "Transport"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "transport.status",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {}
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}
